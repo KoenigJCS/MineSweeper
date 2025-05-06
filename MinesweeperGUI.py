@@ -2,7 +2,7 @@ import sys
 import tkinter as tk
 from tkinter import ttk, messagebox
 from Board import Board
-from Player import Player  # Make sure this file exists and contains CheckWin
+from Player import Player
 
 class MinesweeperGUI:
     def __init__(self):
