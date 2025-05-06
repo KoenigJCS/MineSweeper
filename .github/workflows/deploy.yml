@@ -19,8 +19,11 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.10"
+      - name: Test with pytest
+        run: |
+          python3 -m unittest discover
 
-      # Build python script into a single execute or app folder (macOS)
+      # Build python script into a single execute or app folder
       - name: Python GUI With TkInter
         uses: Nuitka/Nuitka-Action@main
         with:
@@ -30,9 +33,13 @@ jobs:
           enable-plugins: tk-inter
 
       # Uploads artifact
-      - name: Upload Artifact
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: exe
-          path: build/Driver.exe
+          name: ${{ runner.os }} Build
+          path: |
+            build/*.exe
+            build/*.dist/*.exe
+            build/*.bin
+            build/*.app/**/*
           include-hidden-files: true
