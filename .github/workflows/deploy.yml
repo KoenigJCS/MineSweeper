@@ -40,6 +40,7 @@ jobs:
           path: |
             build/*.exe
             build/*.dist/*.exe
+            build/*.dist/*.bin
             build/*.bin
             build/*.app/**/*
           include-hidden-files: true
