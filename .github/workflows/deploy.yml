@@ -1,3 +1,11 @@
+name: Python Deploy
+
+on:
+  [push]
+
+permissions:
+  contents: read
+
 jobs:
 
   build:
