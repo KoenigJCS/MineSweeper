@@ -33,9 +33,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python3 -m unittest discover
-    - name: Zip the project
-        run: zip -r Minesweeper.zip . -x "*.git*" "*.github*"
+        python3 -m unittest discover    
+    - name: Zip
+      run: zip -r Minesweeper.zip . -x "*.git*" "*.github*"
 
     - name: Create Release
       id: create_release
