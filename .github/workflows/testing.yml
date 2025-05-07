@@ -4,7 +4,9 @@
 name: Unit Testing And Release
 
 on:
-  [push]
+  push:
+    tags:
+      - 'v*' # Trigger on pushes to tags matching v*, e.g., v1.2.3
 
 permissions:
   actions: write
