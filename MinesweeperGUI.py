@@ -113,7 +113,7 @@ class MinesweeperGUI:
                 elif tile.isRevealed:
                     btn.config(text=" ", state="disabled", relief="sunken", bg="lightgrey")
                 elif tile.isFlagCovered:
-                    btn.config(text="F", fg="red", bg="#FFFFFF")
+                    btn.config(text="F", fg="red", bg="#000000")
                 else:
                     btn.config(text="", fg="black", bg="#E1EFFF")
 
